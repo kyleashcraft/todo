@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root 'users#show'
+
   devise_for :users
-  root 'home#home'
+
+  get 'home' => 'home#home'
 end
