@@ -11,6 +11,18 @@ class ItemsController < ApplicationController
     end
   end
 
+  def delete
+    @item = Item.find(params[:id])
+
+    if @item.destroy
+      flash[:notice] = "#{@item.name} removed."
+      redirect_back(fallback_location: root_path)
+    else
+      flash[:alert] = "Error deleting #{@item.name}"
+      redirect_back(fallback_location: root_path)
+    end
+  end
+
   private
     def item_params
       params.require(:item).permit(:name, :user)

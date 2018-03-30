@@ -1,6 +1,6 @@
 <div class="container">
-  <h1>Profile: <em><%= @user.email %></em></h1>
-  <div class="container">
+  <h1><em><%= @user.email %></em></h1>
+  <div class="col-md-6">
     <ul class="list-group list-group-flush">
       <%= render(partial: 'items/item', collection: @items) || "You have no ToDos." %>
     </ul>

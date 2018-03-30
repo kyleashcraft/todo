@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show] do
     resources :items, only: [:create]
-  end 
+  end
+
+  delete 'items/:id', to: 'items#delete', as: 'item'
 end
