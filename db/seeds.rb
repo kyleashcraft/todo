@@ -19,4 +19,16 @@ User.create!(
 end
 
 users = User.all
-p "#{users.count} users created."
+puts "#{users.count} users created."
+
+40.times do
+  Item.create!(
+    name: Faker::Company.bs,
+    user: users.sample,
+    created_at: rand(8.day.ago..Time.now)
+  )
+
+end
+
+items = Item.all
+puts "#{items.count} items created."

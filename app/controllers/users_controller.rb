@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def show
     unless current_user
-      redirect_to home_path
+      redirect_to root_path
     end
     @user = current_user
     @items = @user.items
