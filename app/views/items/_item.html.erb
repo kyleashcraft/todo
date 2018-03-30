@@ -1,1 +1,7 @@
-<li class="list-group-item"><%= item.name %> <%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok pull-right' %></li>
+<li class="list-group-item">
+  <b><%= item.name %></b>
+  <small class="text-muted">
+    <%= distance_of_time_in_words item.created_at, item.created_at + 7.days, include_seconds: true %> left
+  </small>
+  <%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok pull-right' %>
+</li>
