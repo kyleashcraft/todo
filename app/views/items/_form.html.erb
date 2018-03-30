@@ -1,6 +1,5 @@
 <%= form_for @item, url: user_items_path(@user,@item), method: :post, html: {class: "form-inline"} do |f| %>
   <div class="form-group">
-    <%= f.label :name, "New ToDo" %>
     <%= f.text_field :name, placeholder: "Enter new ToDo", class: 'form-control' %>
   </div>
 
