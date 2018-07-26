@@ -16,11 +16,10 @@ class ItemsController < ApplicationController
 
     if @item.destroy
       flash[:notice] = "#{@item.name} removed."
-      redirect_back(fallback_location: root_path)
     else
       flash[:alert] = "Error deleting #{@item.name}"
-      redirect_back(fallback_location: root_path)
     end
+    redirect_to root_path
   end
 
   private

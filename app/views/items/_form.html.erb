@@ -1,4 +1,4 @@
-<%= form_for @item, url: user_items_path(@user,@item), method: :post, html: {class: "form-inline"} do |f| %>
+<%= form_for @item, url: user_items_path(@user,@item), remote: true, method: :post, html: {class: "form-inline"} do |f| %>
   <div class="form-group">
     <%= f.text_field :name, placeholder: "Enter new ToDo", class: 'form-control' %>
   </div>

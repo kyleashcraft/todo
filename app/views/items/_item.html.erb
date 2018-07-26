@@ -3,5 +3,5 @@
   <small class="text-muted">
     <%= distance_of_time_in_words Time.now, item.created_at + 7.days, include_seconds: true %> left
   </small>
-  <%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok pull-right' %>
+  <%= link_to "", item, remote: true, method: :delete, class: 'glyphicon glyphicon-ok pull-right' %>
 </li>
